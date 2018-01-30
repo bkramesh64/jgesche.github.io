@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-
 Education
 ======
 * B.Sc. in Mechanical and Process Engineering, Technische Universität Darmstadt, 2015
