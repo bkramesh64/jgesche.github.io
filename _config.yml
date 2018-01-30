@@ -9,7 +9,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    :
+title                    :  ""
 title_separator          : "-"
 name                     : "Julian Gesche"
 description              : "My personal website."
@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Julian Gesche"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profil.jpg"
   bio              : "I have a masters degree in Mechanical Engineering with a specialization in Aerospace Enginnering and Advanced Analytics."
   location         : "Düsseldorf, Germany"
   email            :
