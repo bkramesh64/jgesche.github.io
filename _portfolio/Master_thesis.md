@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Master Thesis Part 1"
 excerpt: "First part of my Master Thesis"
 collection: portfolio
