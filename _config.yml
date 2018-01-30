@@ -172,12 +172,6 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-# Collections
-collections:
-    projects:
-    output: true
-    permalink: /:projects/:path/
-
 
 # Sass/SCSS
 sass:
@@ -259,12 +253,3 @@ defaults:
       comments: # true
       share: true
       related: true
-      # _portfolio
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
