@@ -239,9 +239,9 @@ compress_html:
   ignore:
     envs: development
 
-collections:
-  - projects
-  output: true
+#collections:
+  #- projects
+  #output: true
 # Defaults
 defaults:
   # _posts
