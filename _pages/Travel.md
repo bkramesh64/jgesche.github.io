@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Projects"
-permalink: /projects/
+title: "Travel"
+permalink: /Travel/
 author_profile: false
 ---

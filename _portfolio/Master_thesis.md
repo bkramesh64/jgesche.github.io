@@ -1,6 +1,6 @@
 ---
 title: "Master Thesis Part 1"
-excerpt: "First part of my Master Thesis<br/>"
+excerpt: "First part of my Master Thesis"
 collection: portfolio
 ---
 
