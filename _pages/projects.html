@@ -3,22 +3,3 @@ permalink: /projects/
 title: "Projects"
 author_profile: false
 ---
-
-<div class="row">
-  {% for Project in site.projects %}
-
-    <a href="{{ Project.url | prepend: site.baseurl }}">
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-              {{ Project.title }}
-          </div>
-          <div class="panel-body">
-            {{ Project.excerpt }}
-          </div>
-        </div>
-      </div>
-    </a>
-
-  {% endfor %}
-</div>
