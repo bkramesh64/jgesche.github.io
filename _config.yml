@@ -259,3 +259,12 @@ defaults:
       comments: # true
       share: true
       related: true
+      # _portfolio
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
