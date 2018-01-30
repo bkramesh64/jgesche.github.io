@@ -6,8 +6,8 @@ main:
      url: https://jgesche.github.io/CV/
    - title: "Projects"
      url: https://jgesche.github.io/Projects/
-     - title: "Travel"
-       url: https://jgesche.github.io/Travel/
+   - title: "Travel"
+     url: https://jgesche.github.io/Travel/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
