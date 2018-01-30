@@ -86,8 +86,8 @@ analytics:
 author:
   name             : "Julian Gesche"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "I have a masters degree in Mechanical Engineering with a specialization in Aerospace Enginnering and Advanced Analytics."
+  location         : "Düsseldorf, Germany"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
@@ -101,13 +101,13 @@ author:
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : juliangesche
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : juliangesche
   pinterest        :
   soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
+  stackoverflow    :
+  steam            :
   tumblr           :
   twitter          :
   vine             :
