@@ -5,16 +5,16 @@ author_profile: false
 ---
 
 <div class="row">
-  {% for portfolio in site. %}
+  {% for Project in site.Projects %}
 
-    <a href="{{ portfolio.url | prepend: site.baseurl }}">
+    <a href="{{ Project.url | prepend: site.baseurl }}">
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading">
-              {{ portfolio.title }}
+              {{ Project.title }}
           </div>
           <div class="panel-body">
-            {{ portfolio.excerpt }}
+            {{ Project.excerpt }}
           </div>
         </div>
       </div>
