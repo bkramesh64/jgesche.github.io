@@ -12,8 +12,8 @@ redirect_from:
 Education
 ======
 * B.Sc. in Mechanical and Process Engineering, Technische Universität Darmstadt, 2015
-* B.Sc. University of Illinois, Urbana-Champaign, 2015
-* M.Sc. in Mechanical and Process Engineering, Technische Universität, 2017
+* B.Sc. study abroad program University of Illinois, Urbana-Champaign, 2015
+* M.Sc. in Mechanical and Process Engineering, Technische Universität Darmstadt, 2017
 
 Work experience
 ======

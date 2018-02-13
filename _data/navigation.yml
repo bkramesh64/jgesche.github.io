@@ -1,9 +1,9 @@
 # main links
 main:
-   - title: "About"
-     url: https://jgesche.github.io/about/
    - title: "CV"
      url: https://jgesche.github.io/CV/
+   - title: "Blog"
+     url: https://jgesche.github.io/Blog/
    - title: "Projects"
      url: https://jgesche.github.io/projects/
    - title: "Travel"

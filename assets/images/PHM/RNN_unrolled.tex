@@ -1,0 +1,97 @@
+\documentclass[ border=2pt]{standalone}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots,mathtools}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepgfplotslibrary{fillbetween}
+\usepackage{textcomp}
+\usetikzlibrary{colorbrewer}
+\begin{document}
+	
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{colorbrewer}
+\usepgfplotslibrary{colorbrewer}
+%Multi-hue
+\definecolor{m5}{RGB}{240,249,232}
+\definecolor{m4}{RGB}{186,228,188}
+\definecolor{m3}{RGB}{123,204,196}
+\definecolor{m2}{RGB}{67,162,202}
+\definecolor{m1}{RGB}{8,104,172}
+\def\layersep{2.5cm}
+%Single-hue
+\definecolor{s7}{RGB}{239,243,255}
+\definecolor{s6}{RGB}{198,219,239}
+\definecolor{s5}{RGB}{158,202,225}
+\definecolor{s4}{RGB}{107,174,214}
+\definecolor{s3}{RGB}{66,146,198}
+\definecolor{s2}{RGB}{33,113,181}
+\definecolor{s1}{RGB}{8,69,148}
+
+
+\begin{tikzpicture}  
+\tikzstyle{neuron}=[rectangle,rounded corners,draw=black, fill=s4,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{input}=[rectangle,rounded corners,draw=black, fill=s2,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{output}=[rectangle,rounded corners,draw=black, fill=s6,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{equal}=[circle,draw=white,very thick, inner sep=1em, minimum size=3em, text centered,scale=2]
+\tikzstyle{label}=[rectangle,rounded corners,draw=none, inner sep=0.5em, minimum size=2em, text centered]% Draw the input layer nodes
+\tikzstyle{label1}=[rectangle,rounded corners,draw=none, inner sep=0.5em, minimum size=2em, text centered,fontsize =10pt]% Draw the input layer nodes
+\node[neuron] (neuron) {Neuron};  
+\node[input,below=1cm of neuron] (input) {Input}; 
+\node[output,above=1cm of neuron] (output) {Output}; 
+\node[equal,right =1cm of neuron](equal) {=}; 
+\node[neuron,right =0.2cm of equal](neuron1) {Neuron};
+\node[input,below=1cm of neuron1] (input1) {Input}; 
+\node[output,above=1cm of neuron1] (output1) {Output}; 
+
+\node[neuron,right =of neuron1](neuron2) {Neuron}; 
+\node[input,below=1cm of neuron2] (input2) {Input}; 
+\node[output,above=1cm of neuron2] (output2) {Output}; 
+
+\node[neuron,right =of neuron2](neuron3) {Neuron}; 
+\node[input,below=1cm of neuron3] (input3) {Input}; 
+\node[output,above=1cm of neuron3] (output3) {Output}; 
+%Label
+
+\node[label,above =0.2cm of output1](label1) {$\hat{y}_{t-1}$}; 
+\node[label,above=0.2cm of output2] (label2) {$\hat{y}_{t}$}; 
+\node[label,above=0.2cm of output3] (label3) {$\hat{y}_{t+1}$}; 
+
+\node[label,below =0.2cm of input1](label1) {$u_{t-1}$}; 
+\node[label,below=0.2cm of input2] (label2) {$u_{t}$}; 
+\node[label,below=0.2cm of input3] (label3) {$u_{t+1}$}; 
+
+\node[label,yshift=-0.4cm] at (neuron1.south east)(label1) {$x_{t-1}$}; 
+\node[label,yshift=-0.4cm] at (neuron2.south east)(label2) {$x_{t}$}; 
+\node[label,yshift=-0.4cm] at (neuron3.south east) (label3) {$x_{t+1}$}; 
+
+%HU
+\node[label,yshift=0.3cm,xshift = 0.2cm,scale=0.8] at (input1.north west)(label1) {HU}; 
+\node[label,yshift=0.3cm,xshift = 0.2cm,scale=0.8] at (input2.north west)(label2) {HU}; 
+\node[label,yshift=0.3cm,xshift = 0.2cm,scale=0.8] at (input3.north west) (label3) {HU}; 
+%HH
+\node[label,yshift=0.2cm,xshift = 0.4cm,scale=0.8] at (neuron1.east)(label1) {HH}; 
+\node[label,yshift=0.2cm,xshift = 0.4cm,scale=0.8] at (neuron2.east)(label2) {HH}; 
+
+%HO
+\node[label,yshift=-0.4cm,xshift = 0.4cm,scale=0.8] at (output1.south west)(label1) {HO}; 
+\node[label,yshift=-0.4cm,xshift = 0.4cm,scale=0.8] at (output2.south west)(label2) {HO}; 
+\node[label,yshift=-0.4cm,xshift = 0.4cm,scale=0.8] at (output3.south west) (label3) {HO}; 
+
+% Arrow
+
+\draw[->, very thick] (input.north)--(neuron.south);
+\draw[->, very thick] (neuron.north)--(output.south);
+\draw[->, very thick,rounded corners=4mm] (neuron.east)--(2,0) --(2,1)--(-2,1) --(-2,0)--(neuron.west);
+\draw[->, very thick] (input1.north)--(neuron1.south);
+\draw[->, very thick] (neuron1.north)--(output1.south);
+\draw[->, very thick] (input2.north)--(neuron2.south);
+\draw[->, very thick] (neuron2.north)--(output2.south);
+\draw[->, very thick] (input3.north)--(neuron3.south);
+\draw[->, very thick] (neuron3.north)--(output3.south);
+
+\draw[->, very thick] (neuron1.east)--(neuron2.west);
+\draw[->, very thick] (neuron2.east)--(neuron3.west);
+\end{tikzpicture}
+
+	
+\end{document}

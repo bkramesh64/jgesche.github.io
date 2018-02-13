@@ -8,12 +8,12 @@
 minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "en-DE"
 title                    : "Home"
 title_separator          : "-"
 name                     : "Julian Gesche"
 description              : "My personal website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://jgesche.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -31,14 +31,14 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
 staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
+  allowedFields          : #['name','email', 'message']
+  branch                 :  #"master"
+  commitMessage          :  #"New comment."
+  filename               :  #comment-{@timestamp}
+  format                 :  #"yml"
+  moderation             :  #true
+  path                   :  #"/_data/comments/{options.slug}" (default)
+  requiredFields         :  #['name', 'email', 'message']
   transforms:
     email                : # "md5"
   generatedFields:
@@ -53,6 +53,8 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
+
+
 
 # SEO Related
 google_site_verification :
@@ -86,7 +88,7 @@ analytics:
 author:
   name             : "Julian Gesche"
   avatar           : "/assets/images/profil.jpg"
-  bio              : "I have a masters degree in Mechanical Engineering with a specialization in Aerospace Enginnering and Advanced Analytics."
+  bio              : "Masters Degree @Technische Universität Darmstadt in Mechanical Engineering. Bachelor Degree @UIUC Illinois and @Technische Universität Darmstadt. Specialization in Aerospace Enginnering and Advanced Analytics."
   location         : "Düsseldorf, Germany"
   email            :
   uri              :
@@ -172,6 +174,16 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
 
 
 # Sass/SCSS
@@ -182,7 +194,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 4 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -194,6 +206,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -233,13 +246,13 @@ tag_archive:
 #     tag: /tags/:name/
 # Collections
 collections:
-  teaching:
+  recipes:
     output: true
     permalink: /:collection/:path/
-  publications:
+  portfolio:
     output: true
     permalink: /:collection/:path/
-  projects:
+  projectItems:
     output: true
     permalink: /:collection/:path/
 
@@ -258,9 +271,17 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: splash
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true

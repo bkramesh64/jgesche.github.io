@@ -1,0 +1,113 @@
+\documentclass[ border=2pt]{standalone}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots,mathtools}
+\usetikzlibrary{arrows,shapes,positioning}
+\usepgfplotslibrary{fillbetween}
+\usepackage{textcomp}
+\usetikzlibrary{colorbrewer}
+\begin{document}
+	
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{colorbrewer}
+\usepgfplotslibrary{colorbrewer}
+%Multi-hue
+\definecolor{m5}{RGB}{240,249,232}
+\definecolor{m4}{RGB}{186,228,188}
+\definecolor{m3}{RGB}{123,204,196}
+\definecolor{m2}{RGB}{67,162,202}
+\definecolor{m1}{RGB}{8,104,172}
+\def\layersep{2.5cm}
+%Single-hue
+\definecolor{s7}{RGB}{239,243,255}
+\definecolor{s6}{RGB}{198,219,239}
+\definecolor{s5}{RGB}{158,202,225}
+\definecolor{s4}{RGB}{107,174,214}
+\definecolor{s3}{RGB}{66,146,198}
+\definecolor{s2}{RGB}{33,113,181}
+\definecolor{s1}{RGB}{8,69,148}
+
+
+	\begin{tikzpicture} [envel/.style={shape=ellipse, draw, inner sep=-0.2cm}]
+
+\tikzstyle{neuron}=[rectangle,rounded corners,draw=black, fill=s3!50,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{input}=[rectangle,rounded corners,draw=black, fill=s1!50,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{output}=[rectangle,rounded corners,draw=black, fill=s6!50,very thick, inner sep=0.5em, minimum size=2em, text centered]
+\tikzstyle{outputstart}=[circle,draw=white,very thick, inner sep=1em, minimum size=3em, text centered,scale=0.5]
+\tikzstyle{line} = [ draw, -latex']  
+% Draw the input layer nodes
+
+\node[input]at (0.5,1.25) (input1) {};  
+\node[input] at (0.5,-0.25)(input2) {};  
+
+%Reservoir
+
+\node[neuron] at (3,1.9) (neuron1) {};  
+\node[neuron] at (5,3) (neuron2) {};  
+\node[neuron] at (6.4,-2) (neuron3) {};  
+\node[neuron] at (3,-0.9) (neuron4) {};  
+\node[neuron] at (7.5,1.9) (neuron5) {};  
+\node[neuron] at (6,1.9) (neuron6) {}; 
+\node[neuron] at (5.5,0) (neuron7) {}; 
+\node[neuron] at (8,0) (neuron8) {}; 
+% Output
+\node[output,right = 9 cm of input1] (output1) {};  
+\node[output,right = 9 cm of input2] (output2) {};  
+\node[outputstart] at  (8.5,2.4) (outputstart1) {};  
+\node[outputstart] at  (8.5,-1.4) (outputstart2) {};  
+\node[outputstart] at  (9,0.5) (outputstart) {};  
+%Arrow
+\node[ellipse, draw, thick,
+fit=(neuron1) (neuron2) (neuron3)(neuron4)(neuron5)(neuron6)(neuron7), envel] {};
+
+\draw[->, very thick] (input1.north east)--(1.6,2);
+\draw[->, very thick] (input2.north east)--(1.6,0.3);
+\draw[->, very thick] (input1.south east)--(1.6,0.7);
+\draw[->, very thick] (input2.south east)--(1.6,-1.0);
+\draw[dashed, very thick] (input2.north)--(input1.south);
+
+%Hidden
+\draw[->, very thick] (neuron2)--(neuron1);
+\draw[->, very thick] (neuron4)--(neuron3);
+\draw[->, very thick] (neuron1)--(neuron4);
+\draw[->, very thick] (neuron1)--(neuron6);
+\draw[->, very thick] (neuron7)--(neuron5);
+\draw[->, very thick] (neuron3)--(neuron5);
+\draw[->, very thick] (neuron3)--(neuron7);
+\draw[->, very thick] (neuron5)--(neuron6);
+\draw[->, very thick] (neuron6)--(neuron2);
+\draw[->, very thick] (neuron5)--(neuron8);
+\draw[->, very thick] (neuron3)--(neuron8);
+%\draw[->, very thick] (neuron1)--(neuron7);
+\draw[->, very thick] (neuron7) to [bend right =10] (neuron1);
+\draw[->, very thick] (neuron1) to [bend right = 10] (neuron7);
+\draw[->, very thick] (neuron2) to [out=100,in=160,looseness=8] (neuron2);
+\draw[->, very thick] (neuron3) to [out=300,in=230,looseness=4] (neuron3);
+\draw[->, very thick] (neuron4) to [bend right =10] (neuron7);
+\draw[->, very thick] (neuron5) to [bend right =10] (neuron2);
+%Output
+
+\draw[->, very thick,dashed] (outputstart1) to [bend right =10] (output1);
+\draw[->, very thick] (output1) to [bend right =10] (outputstart1);
+
+\draw[->, very thick,dashed] (outputstart2) to [bend right =10] (output2);
+\draw[->, very thick] (output2) to [bend right =10] (outputstart2);
+
+\draw[->, very thick,dashed] (outputstart) to [bend right =10] (output1);
+\draw[->, very thick] (output1) to [bend right =10] (outputstart);
+
+\draw[->, very thick,dashed] (outputstart) to [bend right =10] (output2);
+\draw[->, very thick] (output2) to [bend right =10] (outputstart);
+
+\draw[->, very thick,dashed] (output1) to [out=30,in=330,looseness=8] (output1);
+\draw[->, very thick,dashed] (output2) to [out=30,in=330,looseness=8] (output2);
+
+
+%Label
+\node[label] at (1,5) (neuron7) {K input units}; 
+\node[label] at (5,5) (neuron8) {L hidden units}; 
+\node[label] at (10.5,5) (neuron7) {M output units}; 
+\end{tikzpicture}
+
+	
+\end{document}
