@@ -30,22 +30,16 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+repository  : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+comments:
+  provider  : "staticman_V2"
 staticman:
-  allowedFields          : #['name','email', 'message']
-  branch                 :  #"master"
-  commitMessage          :  #"New comment."
-  filename               :  #comment-{@timestamp}
-  format                 :  #"yml"
-  moderation             :  #true
-  path                   :  #"/_data/comments/{options.slug}" (default)
-  requiredFields         :  #['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
+  branch    : "master"
   generatedFields:
     date:
-      type               : # "date"
+      type               :  #"date"
       options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+        format           :  #"iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
   siteKey                :
   secret                 :
@@ -87,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Julian Gesche"
-  avatar           : "/assets/images/profil.jpg"
+  avatar           : "/assets/images/020_17.jpg"
   bio              : "Masters Degree @Technische Universität Darmstadt in Mechanical Engineering. Bachelor Degree @UIUC Illinois and @Technische Universität Darmstadt. Specialization in Aerospace Enginnering and Advanced Analytics."
   location         : "Düsseldorf, Germany"
   email            :
@@ -99,7 +93,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : jgesche
   gitlab           :
   google_plus      :
   keybase          :
