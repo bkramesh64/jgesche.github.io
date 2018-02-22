@@ -52,7 +52,7 @@ search_full_content      : # true, false (default)
 
 # SEO Related
 google_site_verification : "NCnbSvIIvmAHD2GYJn1iUwBLQsUjcdwO2lN3PmD_cOk"
-bing_site_verification   :
+bing_site_verification   : "500FB520A503B2C978729CA127E9A2F9"
 yandex_site_verification :
 naver_site_verification  :
 
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Julian Gesche"
   avatar           : "/assets/images/020_17.jpg"
-  bio              : "Masters Degree @Technische Universität Darmstadt in Mechanical Engineering. Bachelor Degree @UIUC Illinois and @Technische Universität Darmstadt. Specialization in Aerospace Enginnering and Advanced Analytics."
+  bio              : "Masters Degree @Technische Universität Darmstadt in Mechanical Engineering. Bachelor Degree @UIUC Illinois and @Technische Universität Darmstadt. Specialization in Aerospace Engineering and Advanced Analytics."
   location         : "Düsseldorf, Germany"
   email            :
   uri              :
@@ -109,7 +109,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          :
 
 
 # Reading Files
