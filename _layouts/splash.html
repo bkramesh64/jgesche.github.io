@@ -14,7 +14,11 @@ layout: default
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
-
+    {% for js in page.custom_js %}
+  <script type="text/javascript">
+  {% include {{ js }} %}
+  </script>
+{% endfor %}
     <section class="page__content" itemprop="text">
       {{ content }}
     </section>
@@ -60,4 +64,6 @@ layout: default
       </div>
     </div>
       {% endif %}
+
+
 </div>
