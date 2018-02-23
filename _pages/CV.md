@@ -26,7 +26,7 @@ Work experience
 * 2015 - 2016: Research Assistant
   * Technische Universität Darmstadt
   * Developed a pressure scanner for a Rolls-Royce Research project on jet engine compressors.
-  * Supervisor: Dr.-Ing. Christoph
+  * Supervisor: Dr.-Ing. Christoph Brandstetter
 
 
 
