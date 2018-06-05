@@ -1,17 +1,1 @@
----
-layout: archive
-permalink: /about/
-last_modified_at: 2018-01-10T11:22:24-05:00
-author_profile: true
-toc: true
----
 
-My name is Julian Gesche from Düsseldorf, Germany. Recently I finished my graduate studies at the Technische Universität Darmstadt in Mechanical and Process Engineering. I am passionate about programming, kitesurfing, aviation and traveling.
-
-In high school, I studied one year abroad in New Zealand. There, I had the opportunity to get my pilots license. The practical flying experiences were an excellent foundation for my undergraduate studies in mechanical and aerospace engineering at the Technische Universität Darmstadt. I focused on aerodynamics and jet propulsion and wrote my Bachelor thesis about computational fluid dynamics. I used the CFD open source toolbox OpenFOAM to simulate the manipulation of leading-edge vortex detachment by means of plasma actuation.
-
- During a year abroad at the University of Illinois at Urbana-Champaign, I shifted my focus to control systems engineering. As a member of a small research team I had the opportunity to develop  a simulation environment for unmanned air vehicle under the supervision of Prof. M. Selig. This project sparked my interest in software development.  I started learning Python in my free time and worked on several programming related side projects.
-
-
-In the last year of my master studies, I decided to write my thesis on predictive maintenance and machine learning algorithms. My specific task was the  implementation of two algorithms to predict the degradation of rolling element bearings in electric motors. The first approach employed Gaussian Process regression and a Particle Filter to propagate the degradation state of a bearing in time. The second approach was based on an Echo State Network, which was optimized by differential evolution.
-I will dedicate several blog posts to predictive maintenance and how to implement various prediction algorithms in Python.
